@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira sans', sans-serif;
+  color: #444;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 1.5rem;
+
+  display: grid;
+  grid-template-rows: auto auto 2fr 1fr auto;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 5px;
+  height: 5rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.control_panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  gap: 1.1rem;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  gap: 0.5rem;
+}
+.result_text {
+  padding-left: 1rem;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.map_app {
+  position: relative;
+  margin-top: 0rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+.select {
+  padding: 0.2em 0.2em;
+  background-color: #ffffff34;
+  font-family: 'Fira Sans', sans-serif;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-end;
+  text-align: center;
+
+  font-size: 0.9rem;
+  color: rgba(128, 128, 128, 0.623);
+}
+
+.class_line {
+  stroke: rgb(75, 75, 75);
+  stroke-width: 2px;
+}
+
+.draggable {
+  cursor: ew-resize;
+}
+
+.selected-line-deaths_per_mil {
+  stroke: #7a0177;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.selected-line-median_age {
+  stroke: #034e7b;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.preselected-line-deaths_per_mil:hover {
+  stroke: #7a0177;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.preselected-line-median_age:hover {
+  stroke: #034e7b;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+text {
+  font-family: 'Fira Sans', sans-serif;
+  color: #444;
+  font-size: 1.2rem;
+}
+.graph-label {
+  font-size: 1.4rem;
+  font-weight: bolder;
+}

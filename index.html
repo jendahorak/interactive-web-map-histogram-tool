@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav class="line_flex">
+      <p class="title">COVID-19 DEATHS (per 1 mil.) AND MEDIAN AGE - 2020-2021</p>
+    </nav>
+
+    <section class="control_panel">
+      <p class="contorl-panel-title">Mapped characteristic:</p>
+      <select name="variable" id="variable_choice" class="select">
+        <option value="median_age">median age</option>
+        <option value="deaths_per_mil">deaths per 1mil.</option>
+      </select>
+      <p class="contorl-panel-title">Number of categories:</p>
+      <select name="cats" id="classify_selection" class="select">
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      <!-- TODO - reset button -->
+    </section>
+
+    <main class="map_app">
+      <div class="map">
+        <object
+          class="svg_map"
+          id="australia"
+          type="image/svg+xml"
+          data="assets/svg/eu_cov_lamb_good.svg"
+          width="500"
+          height="500"
+        ></object>
+      </div>
+      <div id="histogram_parent"></div>
+    </main>
+
+    <div class="results">
+      <p>Currently chosen country: <span class="result_text bold"></span></p>
+      <p>Median age: <span class="result_text bold"></span></p>
+      <p>Deaths per 1mil: <span class="result_text bold"></span></p>
+    </div>
+
+    <footer class="foot">
+      HORÁK J. (2022): COVID-19 DEATHS (per 1 mil.) AND MEDIAN AGE - 2020-2021, Masaryk university, Brno <br />
+      Data:https://github.com/owid/covid-19-data/tree/master/public/data
+    </footer>
+  </body>
+
+  <script type="module" src="histogram_update.js"></script>
+</html>
